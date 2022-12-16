@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	let name = ``
+
+	const handleChange = (e: Event & {currentTarget: EventTarget & HTMLFormElement}) => {
+		console.log(e.currentTarget.dataset)
+	}
+
+	const handleSubmit = (e: SubmitEvent & {currentTarget: EventTarget & HTMLFormElement}) => {
+		e.preventDefault()
+		// console.log(e.currentTarget.da)
+	}
+</script>
+
+<div>
+	<form on:submit={(e) => void handleSubmit(e)} on:change={(e) => {}}>
+		<input bind:value={name} />
+		<p>{name}</p>
+		<button type="submit">Submit</button>
+	</form>
+</div>

@@ -2,6 +2,7 @@
 	"name": "finances2",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -13,9 +14,9 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
-		"@playwright/test": "1.28.1",
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/adapter-auto": "1.0.0",
+		"@sveltejs/kit": "1.0.0",
+		"@types/node": "18.11.13",
 		"@typescript-eslint/eslint-plugin": "5.46.0",
 		"@typescript-eslint/parser": "5.46.0",
 		"autoprefixer": "10.4.13",
@@ -25,8 +26,10 @@
 		"eslint-plugin-svelte3": "4.0.0",
 		"postcss": "8.4.20",
 		"prettier": "2.8.1",
+		"prettier-plugin-prisma": "4.4.0",
 		"prettier-plugin-svelte": "2.9.0",
 		"prettier-plugin-tailwindcss": "0.2.1",
+		"prisma": "4.7.1",
 		"svelte": "3.54.0",
 		"svelte-check": "2.10.2",
 		"svelte-preprocess": "5.0.0",
@@ -34,6 +37,5 @@
 		"tslib": "2.4.1",
 		"typescript": "4.9.4",
 		"vite": "4.0.0"
-	},
-	"type": "module"
+	}
 }
