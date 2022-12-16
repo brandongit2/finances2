@@ -1,6 +1,6 @@
 module.exports = {
 	root: true,
-	extends: [`eslint:recommended`, `plugin:import/recommended`],
+	extends: [`eslint:recommended`, `prettier`, `plugin:import/recommended`],
 	plugins: [`import`],
 	env: {
 		es2020: true,
@@ -14,7 +14,7 @@ module.exports = {
 		"import/no-duplicates": `error`,
 		"import/no-named-as-default": `off`,
 		"import/no-unresolved": `off`,
-		// "import/no-unused-modules": [`warn`, {unusedExports: true, ignoreExports: [`**/*.tsx`, `**/*.config.*`]}],
+		"import/no-unused-modules": [`warn`, {unusedExports: true, ignoreExports: [`**/*.svelte`, `**/*.config.*`]}],
 		"import/order": [
 			`warn`,
 			{
@@ -23,7 +23,7 @@ module.exports = {
 					[`object`, `unknown`, `type`],
 					[`internal`, `parent`, `index`, `sibling`],
 				],
-				pathGroups: [{pattern: `~/**`, group: `internal`}],
+				pathGroups: [{pattern: `$*/**`, group: `internal`}],
 				pathGroupsExcludedImportTypes: [`type`],
 				"newlines-between": `always`,
 				alphabetize: {order: `asc`, caseInsensitive: true},
@@ -69,6 +69,8 @@ module.exports = {
 		},
 		{
 			files: [`**/*.svelte`],
+			plugins: [`svelte3`],
+			processor: `svelte3/svelte3`,
 			env: {
 				browser: true,
 			},

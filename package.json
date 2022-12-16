@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-auto": "1.0.0",
 		"@sveltejs/kit": "1.0.0",
+		"@types/katex": "0.14.0",
 		"@types/node": "18.11.15",
 		"@typescript-eslint/eslint-plugin": "5.46.1",
 		"@typescript-eslint/parser": "5.46.1",
@@ -24,6 +25,7 @@
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-svelte3": "4.0.0",
+		"katex": "0.16.4",
 		"postcss": "8.4.20",
 		"prettier": "2.8.1",
 		"prettier-plugin-prisma": "4.4.0",
